@@ -41,10 +41,14 @@ const CurrenciesSelects = () => {
     const handleChangeFromCurrency = (event: SelectChangeEvent) => {
         const value = event.target.value;
 
+        convertor(currencies, fromValue, value, toCurrency, setToValue);
+
         setFromCurrency(value);
     };
     const handleChangeToCurrency = (event: SelectChangeEvent) => {
         const value = event.target.value;
+
+        convertor(currencies, toValue, fromCurrency, value, setFromValue);
 
         setToCurrency(value);
     };
